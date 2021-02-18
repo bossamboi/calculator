@@ -1,0 +1,138 @@
+body {
+
+}
+
+#calc-body {
+    width: 356px;
+    height: 475px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-style: solid;
+    border-radius: 3%;
+    text-align: center;
+    padding: 20px;
+
+
+
+}
+
+#screen {
+    width: 312px;
+    height: 36px;
+    border-style: solid;
+    border-radius: 3%;
+    margin: auto;
+    padding: 20px;
+    text-align: right;
+    font-size: 30px;
+    
+    
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(25%, 4);
+    grid-template-rows: repeat(20%, 5);
+    padding-top: 20px;
+    background-color: ;
+    width: 360px;
+    margin: auto;
+
+}
+
+.btn {
+    margin: 5px;
+    height: 65px;
+    font-size: 22px;
+}
+
+#clear {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#delete {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+#num1 {
+    grid-column: 1 / 2 ;
+    grid-row: 4 / 5 ;
+}
+
+#num2 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+#num3 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+#num4 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#num5 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#num6 {
+    grid-column: 3/4 ;
+    grid-row: 3/4 ;
+}
+
+#num7 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#num8 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#num9 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#num0 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+#decimal {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+#equals {
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+#plus {
+    grid-column: 4/5;
+    grid-row: 5/6;
+}
+
+#minus {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+#times {
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+
+#divide {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
