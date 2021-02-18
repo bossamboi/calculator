@@ -10,6 +10,9 @@ body {
     margin-top: 40px;
     border-style: solid;
     border-radius: 3%;
+    border-color: black;
+    border-width: 2px;
+    background-color: gray;
     text-align: center;
     padding: 20px;
 
@@ -22,6 +25,9 @@ body {
     height: 36px;
     border-style: solid;
     border-radius: 3%;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgb(240, 240, 240);
     margin: auto;
     padding: 20px;
     text-align: right;
@@ -45,6 +51,7 @@ body {
     margin: 5px;
     height: 65px;
     font-size: 22px;
+
 }
 
 #clear {
