@@ -12,7 +12,7 @@ body {
     border-radius: 3%;
     border-color: black;
     border-width: 2px;
-    background-color: gray;
+    background-color: #a2ceea;
     text-align: center;
     padding: 20px;
 
@@ -51,8 +51,9 @@ body {
     margin: 5px;
     height: 65px;
     font-size: 22px;
-
 }
+
+
 
 #clear {
     grid-column: 1 / 3;
