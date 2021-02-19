@@ -4,6 +4,8 @@ const zero = document.querySelector('.zero');
 const screen = document.querySelector('#screen');
 const operators = document.querySelectorAll('.op');
 const equals = document.querySelector('.eq');
+const clear = document.querySelector('.clear');
+const del = document.querySelector('.del');
 
 let numString;
 let number1;
@@ -45,39 +47,34 @@ zero.addEventListener('click', () => {
 
 operators.forEach(operator => {
     operator.addEventListener('click', () => {
-        opClicked = true;
+        if (opClicked === false) {
+            opClicked = true;
 
-        if (number1 === undefined || screen.textContent == answer) {
-            number1 = +(screen.textContent);
-        } else if (number1 !== undefined) {
-            number2 = +numString;
-            answer = operate(operation, number1, number2);
-            screen.textContent = answer;
-            number1 = answer;
+            if (number1 === undefined || screen.textContent == answer) {
+                number1 = +(screen.textContent);
+            } else if (number1 !== undefined) {
+                number2 = parseInt(screen.textContent);
+                answer = operate(operation, number1, number2);
+                screen.textContent = answer;
+                number1 = answer;
+            }
+
+
+            switch (operator.getAttribute('id')) {
+                case 'plus':
+                    operation = add;
+                    break;
+                case 'minus':
+                    operation = subtract;
+                    break;
+                case 'times':
+                    operation = multiply;
+                    break;
+                case 'divide':
+                    operation = divide;
+                    break;
+            }
         }
-
-
-        switch (operator.getAttribute('id')) {
-            case 'plus':
-                operation = add;
-                break;
-            case 'minus':
-                operation = subtract;
-                break;
-            case 'times':
-                operation = multiply;
-                break;
-            case 'divide':
-                operation = divide;
-                break;
-        }
-
-        // else if (number1 == numString) {
-        //     number2 = +numString;
-        //     answer = operate(operation, number1, number2);
-        //     screen.textContent = answer;
-        //     number1 = answer;
-        // }
 
 
     })
@@ -85,14 +82,26 @@ operators.forEach(operator => {
 
 
 equals.addEventListener('click', () => {
-    eqClicked = true;
-    number2 = +numString;
-    answer = operate(operation, number1, number2);
-    screen.textContent = answer;
-    number1 = undefined;
-    number2 = undefined;
+    if (number1 !== undefined && opClicked === false) {
+        eqClicked = true;
+        number2 = parseInt(screen.textContent);
+        answer = operate(operation, number1, number2);
+        screen.textContent = answer;
+        number1 = undefined;
+        number2 = undefined;
+    }
+
 })
 
+clear.addEventListener('click', () => {
+    number1 = undefined;
+    number2 = undefined;
+    screen.textContent = '0';
+})
+
+del.addEventListener('click', () => {
+    screen.textContent = screen.textContent.slice(0, -1);
+})
 
 function clearScreen() {
     if (opClicked || eqClicked) {
@@ -139,9 +148,14 @@ function multiply() {
 }
 
 function divide() {
-    let total = arguments[0];
-    for (let i = 1; i < arguments.length; i++) {
-        total /= arguments[i];
+    if (arguments[1] == 0) {
+        return "the limit does not exist"
+    } else {
+        let total = arguments[0];
+        for (let i = 1; i < arguments.length; i++) {
+            total /= arguments[i];
+        }
+        return total;
     }
-    return total;
+
 }
