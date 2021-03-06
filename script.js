@@ -111,8 +111,98 @@ function clearScreen() {
     }
 }
 
-
-
+//keyup event listeners
+document.addEventListener('keyup', (event) => {
+    switch (event.keyCode) {
+        case 49:
+        case 97:
+            event.preventDefault();
+            document.getElementById('num1').click();
+            break;
+        case 50:
+        case 98:
+            event.preventDefault();
+            document.getElementById('num2').click();
+            break;
+        case 51:
+        case 99:
+            event.preventDefault();
+            document.getElementById('num3').click();
+            break;
+        case 52:
+        case 100:
+            event.preventDefault();
+            document.getElementById('num4').click();
+            break;
+        case 53:
+        case 101:
+            event.preventDefault();
+            document.getElementById('num5').click();
+            break;
+        case 54:
+        case 102:
+            event.preventDefault();
+            document.getElementById('num6').click();
+            break;
+        case 55:
+        case 103:
+            event.preventDefault();
+            document.getElementById('num7').click();
+            break;
+        case 56:
+        case 104:
+            event.preventDefault();
+            document.getElementById('num8').click();
+            break;
+        case 57:
+        case 105:
+            event.preventDefault();
+            document.getElementById('num9').click();
+            break;
+        case 48:
+        case 96:
+            event.preventDefault();
+            document.getElementById('num0').click();
+            break;
+        case 110:
+        case 190:
+            event.preventDefault();
+            document.getElementById('decimal').click();
+            break;
+        case 107:
+        case 187:
+            event.preventDefault();
+            document.getElementById('plus').click();
+            break;
+        case 109:
+        case 189:
+            event.preventDefault();
+            document.getElementById('minus').click();
+            break;
+        case 56:
+        case 106:
+            event.preventDefault();
+            document.getElementById('times').click();
+            break;
+        case 111:
+        case 191:
+            event.preventDefault();
+            document.getElementById('divide').click();
+            break;
+        case 67:
+            event.preventDefault();
+            document.getElementById('clear').click();
+            break;
+        case 8:
+        case 46:
+            event.preventDefault();
+            document.getElementById('delete').click();
+            break;
+        case 13:
+            event.preventDefault();
+            document.getElementById('equals').click();
+    }
+})
 
 
 // OPERATOR FUNCTIONS BELOW ~~~~~~~~~~~~~~~`
