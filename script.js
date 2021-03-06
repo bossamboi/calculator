@@ -37,7 +37,7 @@ decimal.addEventListener('click', () => {
 
 zero.addEventListener('click', () => {
     clearScreen();
-    if (screen.textContent != 0) {
+    if (screen.textContent !== 0) {
         screen.textContent = screen.textContent.concat(zero.textContent);
         numString = screen.textContent;
         console.log(numString);
